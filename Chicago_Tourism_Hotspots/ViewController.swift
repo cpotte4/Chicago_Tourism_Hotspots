@@ -8,6 +8,9 @@
 // API: AIzaSyAr-xtdqtokyTO303_ai2ZOo2oE9NFZ-Hc
 //
 
+// To-Do:   drop down menu instead of next button
+//          parse csv file
+
 import UIKit
 import GoogleMaps
 import GooglePlaces
@@ -48,6 +51,7 @@ class ViewController: UIViewController {
         let path = Bundle.main.path(forResource: "ChicagoTouristHotspots", ofType: "csv")
     }
     
+    // Starting view when opening the app. Contains an overview of chicago and adds menubar.
     func startingView() {
         let camera = GMSCameraPosition.camera(withLatitude: 41.879108, longitude: -87.635915, zoom: 8)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -62,7 +66,9 @@ class ViewController: UIViewController {
             //setCamera()
         } else {
             if let index = hotspots.index(of: currentDestination!) {
-                currentDestination = hotspots[index + 1]
+                if((index+1) < hotspots.count) {
+                    currentDestination = hotspots[index + 1]
+                }
                 //setCamera()
             }
         }
