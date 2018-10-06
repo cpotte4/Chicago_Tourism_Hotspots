@@ -15,7 +15,7 @@
 		16962EBF2162F23B009CD8FE /* Chicago_Tourism_HotspotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962EBE2162F23B009CD8FE /* Chicago_Tourism_HotspotsTests.swift */; };
 		16962ECA2162F23B009CD8FE /* Chicago_Tourism_HotspotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16962EC92162F23B009CD8FE /* Chicago_Tourism_HotspotsUITests.swift */; };
 		16962ED82162F289009CD8FE /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 16962ED72162F289009CD8FE /* podfile */; };
-		16962F1821631B4B009CD8FE /* ChicagoTouristHotspots.csv in Resources */ = {isa = PBXBuildFile; fileRef = 16962F1721631B4B009CD8FE /* ChicagoTouristHotspots.csv */; };
+		16962F1B21695AF4009CD8FE /* ChicagoTouristHotspots.csv in Resources */ = {isa = PBXBuildFile; fileRef = 16962F1A21695AF4009CD8FE /* ChicagoTouristHotspots.csv */; };
 		7E3ADF139C1E7B214197090A /* libPods-Chicago_Tourism_Hotspots.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507786D551D05D169CEE4950 /* libPods-Chicago_Tourism_Hotspots.a */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		16962EC92162F23B009CD8FE /* Chicago_Tourism_HotspotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicago_Tourism_HotspotsUITests.swift; sourceTree = "<group>"; };
 		16962ECB2162F23B009CD8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16962ED72162F289009CD8FE /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
-		16962F1721631B4B009CD8FE /* ChicagoTouristHotspots.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChicagoTouristHotspots.csv; sourceTree = SOURCE_ROOT; };
+		16962F1A21695AF4009CD8FE /* ChicagoTouristHotspots.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChicagoTouristHotspots.csv; sourceTree = "<group>"; };
 		3D99EBB036D651D985F377D2 /* Pods-Chicago_Tourism_Hotspots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicago_Tourism_Hotspots.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chicago_Tourism_Hotspots/Pods-Chicago_Tourism_Hotspots.release.xcconfig"; sourceTree = "<group>"; };
 		507786D551D05D169CEE4950 /* libPods-Chicago_Tourism_Hotspots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chicago_Tourism_Hotspots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA0692F919EA6F4130DD860 /* Pods-Chicago_Tourism_Hotspots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicago_Tourism_Hotspots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chicago_Tourism_Hotspots/Pods-Chicago_Tourism_Hotspots.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				16962ED72162F289009CD8FE /* podfile */,
+				16962F1921695AF4009CD8FE /* Supporting Files */,
 				16962EA82162F23B009CD8FE /* Chicago_Tourism_Hotspots */,
 				16962EBD2162F23B009CD8FE /* Chicago_Tourism_HotspotsTests */,
 				16962EC82162F23B009CD8FE /* Chicago_Tourism_HotspotsUITests */,
@@ -109,7 +110,6 @@
 		16962EA82162F23B009CD8FE /* Chicago_Tourism_Hotspots */ = {
 			isa = PBXGroup;
 			children = (
-				16962F1721631B4B009CD8FE /* ChicagoTouristHotspots.csv */,
 				16962EA92162F23B009CD8FE /* AppDelegate.swift */,
 				16962EAB2162F23B009CD8FE /* ViewController.swift */,
 				16962EAD2162F23B009CD8FE /* Main.storyboard */,
@@ -137,6 +137,14 @@
 			);
 			path = Chicago_Tourism_HotspotsUITests;
 			sourceTree = "<group>";
+		};
+		16962F1921695AF4009CD8FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16962F1A21695AF4009CD8FE /* ChicagoTouristHotspots.csv */,
+			);
+			path = "Supporting Files";
+			sourceTree = SOURCE_ROOT;
 		};
 		87AA4E88202542DDC131F983 /* Pods */ = {
 			isa = PBXGroup;
@@ -267,7 +275,7 @@
 				16962EB42162F23B009CD8FE /* LaunchScreen.storyboard in Resources */,
 				16962EB12162F23B009CD8FE /* Assets.xcassets in Resources */,
 				16962ED82162F289009CD8FE /* podfile in Resources */,
-				16962F1821631B4B009CD8FE /* ChicagoTouristHotspots.csv in Resources */,
+				16962F1B21695AF4009CD8FE /* ChicagoTouristHotspots.csv in Resources */,
 				16962EAF2162F23B009CD8FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

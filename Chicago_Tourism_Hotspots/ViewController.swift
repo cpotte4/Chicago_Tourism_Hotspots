@@ -7,9 +7,9 @@
 //
 // API: AIzaSyAr-xtdqtokyTO303_ai2ZOo2oE9NFZ-Hc
 //
-
-// To-Do:   drop down menu instead of next button
-//          parse csv file
+// To-Do:   parse csv file
+//          drop down menu instead of next button
+//
 
 import UIKit
 import GoogleMaps
@@ -39,16 +39,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-                
+
         startingView()
         
         parseCSVFile()
-        
     }
+    
     // To-do: Parse csv file so i dont put every location in an array of Hotspot
     func parseCSVFile() {
-        let path = Bundle.main.path(forResource: "ChicagoTouristHotspots", ofType: "csv")
+        let locationFile = "ChicagoTouristHotspots"
+        if let filePath = Bundle.main.path(forResource: locationFile, ofType: "csv") {
+            print("THIS IS THE FILE PATH: " + filePath)             // Debug
+        }
+        else {
+            print("Could not find file")
+        }
+        
+        
     }
     
     // Starting view when opening the app. Contains an overview of chicago and adds menubar.
@@ -58,18 +65,16 @@ class ViewController: UIViewController {
         view = mapView
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped))
-    }
+    }   // end startingView()
     
     @objc func nextTapped() {
         if currentDestination == nil {
             currentDestination = hotspots.first
-            //setCamera()
         } else {
             if let index = hotspots.index(of: currentDestination!) {
                 if((index+1) < hotspots.count) {
                     currentDestination = hotspots[index + 1]
                 }
-                //setCamera()
             }
         }
         setCamera()
@@ -84,7 +89,7 @@ class ViewController: UIViewController {
         let marker = GMSMarker(position: currentDestination!.location)
         marker.title = currentDestination!.name
         marker.map = mapView
-    }
+    }   // end setCamera()
 
 }
 
